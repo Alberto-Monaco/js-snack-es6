@@ -77,10 +77,10 @@ function casuale() {
 	return num
 }
 console.log(casuale())
-let punti = 0
+let punti_fatti = 0
 for (let i = 0; i < squadre.length; i++) {
-	punti = squadre[i].punti_fatti
-	if (punti === 0) {
+	punti_fatti = squadre[i].punti_fatti
+	if (punti_fatti === 0) {
 		squadre[i].punti_fatti = casuale()
 	}
 }
