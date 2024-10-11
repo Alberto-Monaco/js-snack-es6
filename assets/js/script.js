@@ -44,6 +44,61 @@ Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0
 Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”.
 Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.*/
 
-//*Snack 3 (Bonus)
-/*Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
-La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.*/
+const squadre = [
+	{
+		nome: 'juventus',
+		punti_fatti: 0,
+		falli_subito: 0
+	},
+	{
+		nome: 'milan',
+		punti_fatti: 0,
+		falli_subito: 0
+	},
+	{
+		nome: 'napoli',
+		punti_fatti: 0,
+		falli_subito: 0
+	},
+	{
+		nome: 'bologna',
+		punti_fatti: 0,
+		falli_subito: 0
+	},
+	{
+		nome: 'inter',
+		punti_fatti: 0,
+		falli_subito: 0
+	}
+]
+
+function casuale() {
+	num = Math.round(Math.random() * 100) + 1
+	return num
+}
+console.log(casuale())
+let punti = 0
+for (let i = 0; i < squadre.length; i++) {
+	punti = squadre[i].punti_fatti
+	if (punti === 0) {
+		squadre[i].punti_fatti = casuale()
+	}
+}
+
+console.log(squadre)
+let falli_subito = 0
+
+for (let i = 0; i < squadre.length; i++) {
+	falli_subito = squadre[i].falli_subito
+	if (falli_subito === 0) {
+		squadre[i].falli_subito = casuale()
+	}
+}
+console.log(squadre)
+
+let new_squadre = []
+for (let i = 0; i < squadre.length; i++) {
+	new_squadre.push(squadre[i].nome)
+	new_squadre.push(squadre[i].falli_subito)
+}
+console.log(new_squadre)
