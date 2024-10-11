@@ -3,6 +3,40 @@
 Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
 Stampare a schermo la bici con peso minore.*/
 
+const bici = [
+	{
+		nome: 'bici1',
+		peso: 10
+	},
+	{
+		nome: 'bici2',
+		peso: 7
+	},
+	{
+		nome: 'bici3',
+		peso: 18
+	},
+	{
+		nome: 'bici4',
+		peso: 5
+	},
+	{
+		nome: 'bici5',
+		peso: 12
+	}
+]
+let weight_minor = bici[0].peso
+let bici_minor = bici[0].nome
+for (let i = 0; i < bici.length; i++) {
+	let peso = bici[i].peso
+	let name = bici[i].nome
+	if (peso < weight_minor) {
+		bici_minor = name
+		weight_minor = peso
+	}
+}
+console.log(`la bici meno pesante è ${bici_minor} con il peso di ${weight_minor}`)
+
 //*Snack2
 /*Creare un array di oggetti di squadre di calcio.
 Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
