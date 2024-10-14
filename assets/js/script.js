@@ -25,14 +25,17 @@ const bici = [
 		peso: 12
 	}
 ]
-let bici_minor = bici[0]
+let weight_minor = bici[0].peso
+let bici_minor = bici[0].nome
 for (let i = 0; i < bici.length; i++) {
-	const weight_minor = bici_minor.peso
-	if (bici[i].peso < weight_minor) {
-		bici_minor = bici[i]
+	let peso = bici[i].peso
+	let name = bici[i].nome
+	if (peso < weight_minor) {
+		bici_minor = name
+		weight_minor = peso
 	}
 }
-console.log(`la bici meno pesante è ${bici_minor.nome} con il peso di ${bici_minor.peso}`)
+console.log(`la bici meno pesante è ${bici_minor} con il peso di ${weight_minor}`)
 
 //*Snack2
 /*Creare un array di oggetti di squadre di calcio.
