@@ -68,6 +68,7 @@ const squadre = [
 		falli_subito: 0
 	}
 ]
+console.log(squadre)
 
 function casuale() {
 	num = Math.round(Math.random() * 100) + 1
@@ -95,7 +96,9 @@ console.log(squadre)
 
 let new_squadre = []
 for (let i = 0; i < squadre.length; i++) {
-	new_squadre.push(squadre[i].nome)
-	new_squadre.push(squadre[i].falli_subito)
+	new_squadre.push({
+		name: squadre[i].nome,
+		falli_subito: squadre[i].falli_subito
+	})
 }
 console.log(new_squadre)
