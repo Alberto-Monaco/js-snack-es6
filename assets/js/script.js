@@ -69,36 +69,29 @@ const squadre = [
 	}
 ]
 console.log(squadre)
-
+let new_squadre = []
+let punti_fatti
+let falli_subito
 function casuale() {
 	num = Math.round(Math.random() * 100) + 1
 	return num
 }
 console.log(casuale())
-let punti_fatti = 0
+
 for (let i = 0; i < squadre.length; i++) {
 	punti_fatti = squadre[i].punti_fatti
+	falli_subito = squadre[i].falli_subito
 	if (punti_fatti === 0) {
 		squadre[i].punti_fatti = casuale()
 	}
-}
-
-console.log(squadre)
-let falli_subito = 0
-
-for (let i = 0; i < squadre.length; i++) {
-	falli_subito = squadre[i].falli_subito
 	if (falli_subito === 0) {
 		squadre[i].falli_subito = casuale()
 	}
-}
-console.log(squadre)
-
-let new_squadre = []
-for (let i = 0; i < squadre.length; i++) {
 	new_squadre.push({
 		name: squadre[i].nome,
 		falli_subito: squadre[i].falli_subito
 	})
 }
+console.log(squadre)
+
 console.log(new_squadre)
